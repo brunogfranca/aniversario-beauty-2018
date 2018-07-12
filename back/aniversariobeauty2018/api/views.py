@@ -2,8 +2,8 @@ from uuid import uuid4
 from django.contrib.auth.models import User
 from api.serializers import UserSerializer
 from api.models import Tickets, InvitedUsers
-from rest_framework import mixins
-from rest_framework import generics
+from rest_framework import mixins, generics
+from api.permissions import IsHimself
 
 
 class UserList(mixins.CreateModelMixin,
@@ -37,6 +37,7 @@ class UserDetail(mixins.RetrieveModelMixin,
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = (IsHimself,)
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)

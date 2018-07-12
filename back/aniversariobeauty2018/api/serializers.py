@@ -5,20 +5,15 @@ from rest_framework import serializers
 
 
 class UserSerializer(serializers.ModelSerializer):
-    # tickets = serializers.PrimaryKeyRelatedField(many=True, queryset=Tickets.objects.all())
-    # tickets = serializers.SlugRelatedField(many=True, slug_field='hash', queryset=Tickets.objects.all())
-    # tickets = serializers.RelatedField(many=True, queryset=Tickets.objects.all())
     name = serializers.SerializerMethodField()
-    # ref = serializers.CharField(allow_blank=True)
-
+    
     class Meta:
         model = User
         fields = ('id', 'name', 'first_name', 'last_name', 'username', 'email', 'tickets')
         read_only_fields = ('tickets',)
         extra_kwargs = {
             'ref': {
-                'read_only': True,
-                # 'default': serializers.CurrentUserDefault(),
+                'read_only': True
             }
         }
 
