@@ -25,8 +25,8 @@ class UserPage extends Component {
       );
     })
 
-    const userUrl = '/register?ref='+this.props.user.id
-    // const userUrl = 'http://aniversario2018.beautyterapia.com.br/register?ref='+this.props.user.id
+    // const userUrl = '/register?ref='+this.props.user.id
+    const userUrl = 'http://aniversario2018.beautyterapia.com.br/register?ref='+this.props.user.id
 
     return (
       <div>
