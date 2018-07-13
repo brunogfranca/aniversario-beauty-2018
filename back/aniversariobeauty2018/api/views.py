@@ -20,6 +20,8 @@ class UserList(mixins.CreateModelMixin,
     def perform_create(self, serializer):
         ref = serializer.initial_data.get('ref')
         user = serializer.save()
+        user.set_password(serializer.initial_data.get('password'))
+        user.save()
         ticket = Tickets(user=user, hash=uuid4())
         ticket.save()
         if ref:
