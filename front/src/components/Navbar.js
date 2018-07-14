@@ -51,7 +51,7 @@ class Navbar extends Component {
                   onClick={this.handlePageChange} 
                   data-target="/" 
                   style={linkStyle} 
-                  className="brand-logo hide-on-med-and-down"
+                  className="brand-logo hide-on-med-and-down teal-text text-lighten-2"
                 >
                   {this.props.siteName}
                 </a>
@@ -61,7 +61,7 @@ class Navbar extends Component {
                   style={{
                     fontSize:'22px'
                   }} 
-                  className="brand-logo left hide-on-large-only"
+                  className="brand-logo left hide-on-large-only teal-text text-lighten-2"
                 >
                   {this.props.siteName}
                 </a>

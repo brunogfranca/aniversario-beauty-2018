@@ -14,16 +14,16 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <div className="container">
+        <div className="container white">
           <h4>Aniversário 4 anos Beauty Terapia</h4>
           <Row>
             {!this.props.isLoggedIn ? (
-              <Col m={3} s={12} style={{marginTop:'5px'}}>
-                <Button onClick={this.handlePageChange} data-target="/register">Participe</Button>
+              <Col m={6} s={12} style={{marginTop:'5px'}}>
+                <Button onClick={this.handlePageChange} data-target="/register" className="red lighten-2">Participe</Button>
               </Col>
             ) : ''}
-            <Col m={3} s={12} style={{marginTop:'5px'}}>
-              <Button onClick={this.handlePageChange} data-target="/user">Ver seus Tickets</Button>
+            <Col m={6} s={12} style={{marginTop:'5px'}}>
+              <Button onClick={this.handlePageChange} data-target="/user" className="red lighten-2">Ver seus Tickets</Button>
             </Col>
           </Row>
         </div>

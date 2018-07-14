@@ -211,7 +211,7 @@ class RegisterPage extends Component {
           </Row>
           <Row>
             <Col s={12}>
-              <Button s={12} large={true} type="submit">
+              <Button s={12} large={true} type="submit" className="red lighten-2">
                 Participar
               </Button>
             </Col>

@@ -8,6 +8,7 @@
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.10",
     "react": "^16.4.1",
+    "react-clipboard.js": "^2.0.0",
     "react-dom": "^16.4.1",
     "react-materialize": "^2.3.3",
     "react-redux": "^5.0.7",

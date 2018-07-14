@@ -79,10 +79,11 @@ class Login extends Component {
             style={{
               cursor: 'pointer'
             }}
+            className="teal-text text-lighten-2"
           >
             Ainda não estou participando
           </a>
-          <Button className="right" type="submit">
+          <Button className="right red lighten-2" type="submit">
             Entrar
           </Button>
         </form>

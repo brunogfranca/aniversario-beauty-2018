@@ -1,6 +1,7 @@
 import fetch from 'cross-fetch';
 import { baseHeaders, authHeader } from '../helpers/headers'
 import { checkStatus, parseJSON, handleError } from '../helpers/request'
+import { history } from '../helpers/history'
 import jwt_decode from 'jwt-decode'
 import _ from 'lodash'
 
@@ -249,7 +250,12 @@ function getUpdatedData(state) {
     const userId = state.user.user.user_id || state.user.user.id
     return fetch(`/api/api/users/${userId}/`, requestOptions)
       .then(response => {
-        if (!response.ok) { 
+        if (!response.ok) {
+          console.log(response)
+          if (response.status==401) {
+            dispatch(sendUserLogout());
+            history.push('/login');
+          }
           return Promise.reject(response.statusText);
         }
         return response.json();

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Clipboard from 'react-clipboard.js';
 import { history } from '../helpers/history'
-import { Table } from 'react-materialize'
+import { Table, Icon, Button } from 'react-materialize'
 import { getUserUpdatedData } from '../actions'
 
 class UserPage extends Component {
@@ -30,10 +31,20 @@ class UserPage extends Component {
     clearInterval(this.timerID);
   }
 
+  componentDidUpdate() {
+    if (!this.props.isLoggedIn) {
+      history.push('/login');
+    }
+  }
+
   handlePageChange(e) {
     e.preventDefault();
     
-    history.push(e.currentTarget.dataset.target)
+    history.push(e.currentTarget.dataset.target);
+  }
+
+  handleCopyUrlSuccess() {
+    window.Materialize.toast('Link copiado', 3000);
   }
 
   render() {
@@ -58,17 +69,33 @@ class UserPage extends Component {
         <div className="container">
           <h4>Boa sorte {this.props.user.name}!</h4>
           <p>
-            Para ter mais chances de ganhar convide seus amigos enviando seu link: <a href={userUrl}>{userUrl}</a>
+            Para ter mais chances de ganhar convide seus amigos enviando seu link:<br />
+            <a href={userUrl} className="teal-text text-lighten-2">{userUrl}</a>
           </p>
+          <Clipboard
+            data-clipboard-text={userUrl}
+            onSuccess={this.handleCopyUrlSuccess}
+            component='span'
+            style={{
+              cursor: 'pointer'
+            }}
+          >
+            <Button className="red lighten-2">
+              <Icon tiny left>content_copy</Icon>
+              Copiar Link
+            </Button>
+          </Clipboard>
           <h5>Seus Tickets</h5>
-          <Table>
+          <Table striped={true}>
             <thead>
               <tr>
                 <th>Ticket</th>
                 <th>Origem</th>
               </tr>
             </thead>
-            {tickets}
+            <tbody>
+              {tickets}
+            </tbody>
           </Table>
         </div>
       </div>
