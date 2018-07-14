@@ -246,7 +246,8 @@ function getUpdatedData(state) {
       method: 'GET',
       headers: headers
     };
-    return fetch(`/api/api/users/${state.user.user.user_id}/`, requestOptions)
+    const userId = state.user.user.user_id || state.user.user.id
+    return fetch(`/api/api/users/${userId}/`, requestOptions)
       .then(response => {
         if (!response.ok) { 
           return Promise.reject(response.statusText);

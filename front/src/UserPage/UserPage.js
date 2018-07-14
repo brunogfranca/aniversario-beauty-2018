@@ -3,8 +3,33 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { history } from '../helpers/history'
 import { Table } from 'react-materialize'
+import { getUserUpdatedData } from '../actions'
 
 class UserPage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.tick = this.tick.bind(this);
+    this.tick();
+  }
+
+  tick() {
+    const { dispatch } = this.props
+
+    dispatch(getUserUpdatedData());
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      10000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
   handlePageChange(e) {
     e.preventDefault();
     
