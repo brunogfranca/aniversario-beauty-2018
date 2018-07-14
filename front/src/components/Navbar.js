@@ -42,7 +42,8 @@ class Navbar extends Component {
     let colorNav = 'nav-wrapper ' + this.props.color;
 
     let linkStyle = {
-      cursor: 'pointer'
+      cursor: 'pointer',
+      display: 'flex'
     }
     return (
       <div>
@@ -56,16 +57,19 @@ class Navbar extends Component {
                   style={linkStyle} 
                   className="brand-logo hide-on-med-and-down teal-text text-lighten-2"
                 >
+                  <img src="http://aniversario2018.beautyterapia.com.br/imgs/sapato_blog.jpg" height="50" />
                   {this.props.siteName}
                 </a>
                 <a 
                   onClick={this.handlePageChange} 
                   data-target="/" 
                   style={{
-                    fontSize:'22px'
+                    fontSize:'22px',
+                    display: 'flex'
                   }} 
                   className="brand-logo left hide-on-large-only teal-text text-lighten-2"
                 >
+                  <img src="http://aniversario2018.beautyterapia.com.br/imgs/sapato_blog.jpg" height="50" />
                   {this.props.siteName}
                 </a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
