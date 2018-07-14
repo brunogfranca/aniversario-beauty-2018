@@ -65,6 +65,18 @@ class Navbar extends Component {
                 >
                   {this.props.siteName}
                 </a>
+                <ul id="nav-mobile" className="right">
+                  <li>
+                    <a
+                      className="teal-text text-lighten-2"
+                      onClick={this.handlePageChange} 
+                      data-target="/rules" 
+                    >Regras</a>
+                  </li>
+                  <li>
+                    <a className="teal-text text-lighten-2" href="http://www.beautyterapia.com.br">Blog</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </nav>

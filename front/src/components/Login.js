@@ -83,7 +83,7 @@ class Login extends Component {
           >
             Ainda não estou participando
           </a>
-          <Button className="right red lighten-2" type="submit">
+          <Button className="right pink lighten-2" type="submit">
             Entrar
           </Button>
         </form>

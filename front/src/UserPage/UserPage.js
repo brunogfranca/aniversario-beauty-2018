@@ -80,7 +80,7 @@ class UserPage extends Component {
               cursor: 'pointer'
             }}
           >
-            <Button className="red lighten-2">
+            <Button className="pink lighten-2">
               <Icon tiny left>content_copy</Icon>
               Copiar Link
             </Button>

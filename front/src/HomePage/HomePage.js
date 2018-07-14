@@ -19,11 +19,11 @@ class HomePage extends Component {
           <Row>
             {!this.props.isLoggedIn ? (
               <Col m={6} s={12} style={{marginTop:'5px'}}>
-                <Button onClick={this.handlePageChange} data-target="/register" className="red lighten-2">Participe</Button>
+                <Button onClick={this.handlePageChange} data-target="/register" className="pink lighten-2">Participe</Button>
               </Col>
             ) : ''}
             <Col m={6} s={12} style={{marginTop:'5px'}}>
-              <Button onClick={this.handlePageChange} data-target="/user" className="red lighten-2">Ver seus Tickets</Button>
+              <Button onClick={this.handlePageChange} data-target="/user" className="pink lighten-2">Ver seus Tickets</Button>
             </Col>
           </Row>
         </div>
