@@ -15,39 +15,39 @@ class RulesPage extends Component {
     const listProducts = [
       {
         name: '1x Óleo Emebelezador Lágrimas de Unicórino da Cat Make',
-        image: 'https://aniversario2018.beautyterapia.com.br/imgs/products/catmake.jpg'
+        image: 'http://aniversario2018.beautyterapia.com.br/imgs/products/catmake.jpg'
       },
       {
         name: '1x Paleta Facial Cheek Glow Studio Palette da Ruby Rose',
-        image: 'https://aniversario2018.beautyterapia.com.br/imgs/products/catmake.jpg'
+        image: 'http://aniversario2018.beautyterapia.com.br/imgs/products/cheekglow.jpg'
       },
       {
         name: '1x Paleta de Sombras Rose Spirit Palette da Ruby Rose',
-        image: 'https://aniversario2018.beautyterapia.com.br/imgs/products/catmake.jpg'
+        image: 'http://aniversario2018.beautyterapia.com.br/imgs/products/rose+spirit.jpg'
       },
       {
         name: '1x Máscara Facial de Argila Purificante da Vichy',
-        image: 'https://aniversario2018.beautyterapia.com.br/imgs/products/catmake.jpg'
+        image: 'http://aniversario2018.beautyterapia.com.br/imgs/products/argila+vichy.jpg'
       },
       {
         name: '1x Esmalte Risqué Coleção Disney - Lacinho de Poá',
-        image: 'https://aniversario2018.beautyterapia.com.br/imgs/products/catmake.jpg'
+        image: 'http://aniversario2018.beautyterapia.com.br/imgs/products/lacinho+de+poa.jpg'
       },
       {
         name: '1x Esmalte Risqué Coleção Disney - Babados e Bolinhas',
-        image: 'https://aniversario2018.beautyterapia.com.br/imgs/products/catmake.jpg'
+        image: 'http://aniversario2018.beautyterapia.com.br/imgs/products/babados+e+bolinha.jpg'
       },
       {
         name: '1x Conjunto de Mini Lixas de Unha da Ricca',
-        image: 'https://aniversario2018.beautyterapia.com.br/imgs/products/catmake.jpg'
+        image: 'http://aniversario2018.beautyterapia.com.br/imgs/products/mini+lixa1.jpg'
       },
       {
         name: '1x Tesoura de Unha Girls da Ricca',
-        image: 'https://aniversario2018.beautyterapia.com.br/imgs/products/catmake.jpg'
+        image: 'http://aniversario2018.beautyterapia.com.br/imgs/products/tesoura.jpg'
       },
       {
         name: '1x Bombons Sortidos',
-        image: 'https://aniversario2018.beautyterapia.com.br/imgs/products/catmake.jpg'
+        image: 'http://aniversario2018.beautyterapia.com.br/imgs/products/chocopromo.jpg'
       },
     ]
     let products = listProducts.map((product, i) => {

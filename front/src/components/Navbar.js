@@ -2,7 +2,10 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { 
-  Icon
+  Icon,
+  Dropdown,
+  NavItem,
+  Button
 } from 'react-materialize';
 import { history } from '../helpers/history'
 import { sendUserLogout, getUserUpdatedData } from '../actions';
@@ -65,7 +68,21 @@ class Navbar extends Component {
                 >
                   {this.props.siteName}
                 </a>
-                <ul id="nav-mobile" className="right">
+                <ul id="nav-mobile" className="right hide-on-med-and-down">
+                  <li>
+                    <a
+                      className="teal-text text-lighten-2"
+                      onClick={this.handlePageChange} 
+                      data-target="/user" 
+                    >Meus Tickets</a>
+                  </li>
+                  <li>
+                    <a
+                      className="teal-text text-lighten-2"
+                      onClick={this.handlePageChange} 
+                      data-target="/register" 
+                    >Participe</a>
+                  </li>
                   <li>
                     <a
                       className="teal-text text-lighten-2"
@@ -76,6 +93,41 @@ class Navbar extends Component {
                   <li>
                     <a className="teal-text text-lighten-2" href="http://www.beautyterapia.com.br">Blog</a>
                   </li>
+                </ul>
+                <ul className="right hide-on-large-only">
+                  <Dropdown 
+                    options={{
+                      constrainWidth: false
+                    }}
+                    trigger={
+                      <li><a className="teal-text text-lighten-2"><i class="material-icons">more_vert</i></a></li>
+                    }
+                  >
+                    <NavItem>
+                      <a
+                        className="teal-text text-lighten-2"
+                        onClick={this.handlePageChange} 
+                        data-target="/user" 
+                      >Meus Tickets</a>
+                    </NavItem>
+                    <NavItem>
+                      <a
+                        className="teal-text text-lighten-2"
+                        onClick={this.handlePageChange} 
+                        data-target="/register" 
+                      >Participe</a>
+                    </NavItem>
+                    <NavItem>
+                      <a
+                        className="teal-text text-lighten-2"
+                        onClick={this.handlePageChange} 
+                        data-target="/rules" 
+                      >Regras</a>
+                    </NavItem>
+                    <NavItem>
+                    <a className="teal-text text-lighten-2" href="http://www.beautyterapia.com.br">Blog</a>
+                    </NavItem>
+                  </Dropdown>
                 </ul>
               </div>
             </div>
