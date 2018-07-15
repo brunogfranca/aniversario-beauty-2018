@@ -14,7 +14,7 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <img src="http://aniversario2018.beautyterapia.com.br/imgs/aniversario-beauty.jpg" onClick={this.handlePageChange} data-target="/register" width="100%" />
+        <img src="https://aniversario2018.beautyterapia.com.br/imgs/aniversario-beauty.jpg" onClick={this.handlePageChange} data-target="/register" width="100%" />
         <div className="container white">
           {/* <h4>Aniversário 4 anos Beauty Terapia</h4> */}
           <Row>

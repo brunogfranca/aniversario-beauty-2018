@@ -57,7 +57,7 @@ class Navbar extends Component {
                   style={linkStyle} 
                   className="brand-logo hide-on-med-and-down teal-text text-lighten-2"
                 >
-                  <img src="http://aniversario2018.beautyterapia.com.br/imgs/sapato_blog.jpg" height="50" />
+                  <img src="https://aniversario2018.beautyterapia.com.br/imgs/sapato_blog.jpg" height="50" />
                   {this.props.siteName}
                 </a>
                 <a 
@@ -69,7 +69,7 @@ class Navbar extends Component {
                   }} 
                   className="brand-logo left hide-on-large-only teal-text text-lighten-2"
                 >
-                  <img src="http://aniversario2018.beautyterapia.com.br/imgs/sapato_blog-tiny.jpg" height="50" />
+                  <img src="https://aniversario2018.beautyterapia.com.br/imgs/sapato_blog-tiny.jpg" height="50" />
                   {this.props.siteName}
                 </a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
