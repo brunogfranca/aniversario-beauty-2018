@@ -24,7 +24,7 @@ class AsyncApp extends Component {
   render() {
     return (
       <div style={{
-        backgroundImage: 'url("https://static.squarespace.com/static/53756cd0e4b0cf50765ac928/t/53c9c87ae4b0847eddf97a78/1405732986040/shutterstock_124159213.jpg")',
+        backgroundImage: 'url("http://aniversario2018.beautyterapia.com.br/imgs/bg-beauty.jpg")',
         backgroundRepeat: 'repeat',
         minHeight: '100%',
         height: '100%',
