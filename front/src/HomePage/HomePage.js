@@ -14,9 +14,9 @@ class HomePage extends Component {
   render() {
     return (
       <div>
+        <img src="http://aniversario2018.beautyterapia.com.br/imgs/aniversario-beauty.png" onClick={this.handlePageChange} data-target="/register" width="100%" />
         <div className="container white">
           {/* <h4>Aniversário 4 anos Beauty Terapia</h4> */}
-          <img src="http://aniversario2018.beautyterapia.com.br/imgs/sapato_blog.jpg" onClick={this.handlePageChange} data-target="/register" />
           <Row>
             {!this.props.isLoggedIn ? (
               <Col m={6} s={12} style={{marginTop:'5px'}}>
