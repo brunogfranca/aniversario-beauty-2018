@@ -95,6 +95,13 @@ class Navbar extends Component {
                     >Regras</a>
                   </li>
                   <li>
+                    <a
+                      className="teal-text text-lighten-2"
+                      onClick={this.handlePageChange} 
+                      data-target="/howto" 
+                    >Como Participar?</a>
+                  </li>
+                  <li>
                     <a className="teal-text text-lighten-2" href="http://www.beautyterapia.com.br">Blog</a>
                   </li>
                 </ul>
@@ -127,6 +134,13 @@ class Navbar extends Component {
                         onClick={this.handlePageChange} 
                         data-target="/rules" 
                       >Regras</a>
+                    </NavItem>
+                    <NavItem>
+                      <a
+                        className="teal-text text-lighten-2"
+                        onClick={this.handlePageChange} 
+                        data-target="/howto" 
+                      >Como Participar?</a>
                     </NavItem>
                     <NavItem>
                     <a className="teal-text text-lighten-2" href="http://www.beautyterapia.com.br">Blog</a>

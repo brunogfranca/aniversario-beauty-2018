@@ -12,6 +12,7 @@ import { UserPage } from '../UserPage/UserPage'
 import { RegisterPage } from '../RegisterPage/RegisterPage'
 import { getUserData, getUserUpdatedData } from '../actions'
 import { RulesPage } from '../Rulespage/RulesPage';
+import { HowToPage } from '../HowToPage/HowToPage';
 
 
 class AsyncApp extends Component {
@@ -44,6 +45,7 @@ class AsyncApp extends Component {
             <PrivateRoute exact path="/user" component={UserPage} />
             <Route path="/login" component={LoginPage} />
             <Route path="/rules" component={RulesPage} />
+            <Route path="/howto" component={HowToPage} />
           </div>
         </Router>
       </div>

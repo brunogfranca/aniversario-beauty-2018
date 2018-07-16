@@ -16,17 +16,14 @@ class HomePage extends Component {
       <div>
         <img src="https://aniversario2018.beautyterapia.com.br/imgs/aniversario-beauty.jpg" onClick={this.handlePageChange} data-target="/register" width="100%" />
         <div className="container white">
-          {/* <h4>Aniversário 4 anos Beauty Terapia</h4> */}
-          <Row>
+          <div class="collection">
             {!this.props.isLoggedIn ? (
-              <Col m={6} s={12} style={{marginTop:'5px'}}>
-                <Button onClick={this.handlePageChange} data-target="/register" className="pink lighten-2">Participe</Button>
-              </Col>
+              <a onClick={this.handlePageChange} data-target="/register" class="collection-item pink lighten-2 center white-text" style={{cursor:'pointer'}}>Participe</a>
             ) : ''}
-            <Col m={6} s={12} style={{marginTop:'5px'}}>
-              <Button onClick={this.handlePageChange} data-target="/user" className="pink lighten-2">Ver seus Tickets</Button>
-            </Col>
-          </Row>
+            <a onClick={this.handlePageChange} data-target="/user" class="collection-item" style={{cursor:'pointer'}}>Meus Tickets</a>
+            <a onClick={this.handlePageChange} data-target="/howto" class="collection-item" style={{cursor:'pointer'}}>Como Participar?</a>
+            <a onClick={this.handlePageChange} data-target="/rules" class="collection-item" style={{cursor:'pointer'}}>Regras</a>
+          </div>
         </div>
       </div>
     );
