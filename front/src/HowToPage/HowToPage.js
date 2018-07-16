@@ -35,7 +35,7 @@ class HowToPage extends Component {
           <p>
             Para ver todas as regras basta <a onClick={this.handlePageChange} data-target="/rules" style={{cursor:'pointer'}}>clicar aqui</a>
           </p>
-          <Button className="pink lighten-2" onClick={this.handlePageChange} data-target="/howto" style={{cursor:'pointer'}}>Quero Participar!</Button>
+          <Button className="pink lighten-2" onClick={this.handlePageChange} data-target="/register" style={{cursor:'pointer'}}>Quero Participar!</Button>
         </div>
       </div>
     );
