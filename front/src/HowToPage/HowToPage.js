@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { history } from '../helpers/history'
-import { Collection, CollectionItem } from 'react-materialize'
+import { Button } from 'react-materialize'
 
 class HowToPage extends Component {
   handlePageChange(e) {
@@ -35,6 +35,7 @@ class HowToPage extends Component {
           <p>
             Para ver todas as regras basta <a onClick={this.handlePageChange} data-target="/rules" style={{cursor:'pointer'}}>clicar aqui</a>
           </p>
+          <Button className="pink lighten-2">Quero Participar!</Button>
         </div>
       </div>
     );
