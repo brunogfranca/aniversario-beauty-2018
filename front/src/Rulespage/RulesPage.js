@@ -67,7 +67,8 @@ class RulesPage extends Component {
       (<Fragment>O sorteio será feito a partir de tickets distribuídos de duas maneiras: 1 ticket no momento do cadastro; 1 ticket para cada cadastrado indicado.</Fragment>),
       (<Fragment>O sorteio será feito através de um programa que irá escolher de forma aleatória e eletrônica um dos tickets participantes.</Fragment>),
       (<Fragment>O vencedor receberá um e-mail avisando sobre o sorteio e solicitando o endereço completo e outras informações para o envio do prêmio.</Fragment>),
-      (<Fragment>O vencedor terá até 7 dias para responder o e-mail com as informações solicitadas. Caso a pessoa não responda, haverá um novo sorteio. As regras para o novo vencedor serão as mesmas citadas acima</Fragment>)
+      (<Fragment>O vencedor terá até 7 dias para responder o e-mail com as informações solicitadas. Caso a pessoa não responda, haverá um novo sorteio. As regras para o novo vencedor serão as mesmas citadas acima</Fragment>),
+      (<Fragment>Ao participar de nosso sorteio você automaticamente assina nossa newsletter.</Fragment>)
     ]
     let rules = RulesList.map((rule, i) => {
       return (

@@ -13,6 +13,7 @@ import { RegisterPage } from '../RegisterPage/RegisterPage'
 import { getUserData, getUserUpdatedData } from '../actions'
 import { RulesPage } from '../Rulespage/RulesPage';
 import { HowToPage } from '../HowToPage/HowToPage';
+import ScrollToTop from '../helpers/scrollToTop'
 
 
 class AsyncApp extends Component {
@@ -35,17 +36,19 @@ class AsyncApp extends Component {
         overflow: 'auto'
       }}>
         <Navbar siteName="Beauty Terapia" color="white teal-text text-lighten-2" />
-        <Router history={history}>
+        <Router history={history} onUpdate={() => window.scrollTo(0, 0)}>
           <div className="container white" style={{
             minHeight: '100%',
             overflow: 'auto'
           }}>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/register" component={RegisterPage} />
-            <PrivateRoute exact path="/user" component={UserPage} />
-            <Route path="/login" component={LoginPage} />
-            <Route path="/rules" component={RulesPage} />
-            <Route path="/howto" component={HowToPage} />
+            <ScrollToTop>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/register" component={RegisterPage} />
+              <PrivateRoute exact path="/user" component={UserPage} />
+              <Route path="/login" component={LoginPage} />
+              <Route path="/rules" component={RulesPage} />
+              <Route path="/howto" component={HowToPage} />
+            </ScrollToTop>
           </div>
         </Router>
       </div>

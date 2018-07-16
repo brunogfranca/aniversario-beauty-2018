@@ -18,7 +18,7 @@ class HomePage extends Component {
         <div className="container white">
           <div class="collection">
             {!this.props.isLoggedIn ? (
-              <a onClick={this.handlePageChange} data-target="/register" class="collection-item pink lighten-2 center white-text" style={{cursor:'pointer'}}>Participe</a>
+              <a onClick={this.handlePageChange} data-target="/register" class="collection-item pink lighten-2 center white-text" style={{cursor:'pointer'}}>Quero Participar!</a>
             ) : ''}
             <a onClick={this.handlePageChange} data-target="/user" class="collection-item" style={{cursor:'pointer'}}>Meus Tickets</a>
             <a onClick={this.handlePageChange} data-target="/howto" class="collection-item" style={{cursor:'pointer'}}>Como Participar?</a>

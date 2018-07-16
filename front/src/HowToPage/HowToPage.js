@@ -30,7 +30,10 @@ class HowToPage extends Component {
             Cada indicado cadastrado te dará direito a mais um ticket!
           </p>
           <p>
-            Cada pessoa pode se inscrever apenas uma vez, mas ela pode repassar os convites para o número de pessoas que ela quiser, e cada pessoa que se inscrever através do convite que você mandou, você ganha um ticket novo e cada ticket que você recebe aumenta sua chance no sorteio final. 
+            Cada pessoa pode se inscrever apenas uma vez, mas ela pode repassar os convites para o número de pessoas que ela quiser.
+          </p>
+          <p>
+            Vale dizer que é um sorteio, portanto o ticket vencedor será sorteado de forma aleatória através de um sistema online, porém quanto mais tickets você tiver, maiores são as chances do sistema escolher um ticket seu.
           </p>
           <p>
             Para ver todas as regras basta <a onClick={this.handlePageChange} data-target="/rules" style={{cursor:'pointer'}}>clicar aqui</a>

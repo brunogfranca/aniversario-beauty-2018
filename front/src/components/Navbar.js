@@ -111,40 +111,40 @@ class Navbar extends Component {
                       constrainWidth: false
                     }}
                     trigger={
-                      <li><a className="teal-text text-lighten-2"><i class="material-icons">more_vert</i></a></li>
+                      <li><a className="teal-text text-lighten-2"><i className="material-icons">more_vert</i></a></li>
                     }
                   >
-                    <NavItem>
+                    <li>
                       <a
                         className="teal-text text-lighten-2"
                         onClick={this.handlePageChange} 
                         data-target="/user" 
                       >Meus Tickets</a>
-                    </NavItem>
-                    <NavItem>
+                    </li>
+                    <li>
                       <a
                         className="teal-text text-lighten-2"
                         onClick={this.handlePageChange} 
                         data-target="/register" 
                       >Participe</a>
-                    </NavItem>
-                    <NavItem>
+                    </li>
+                    <li>
                       <a
                         className="teal-text text-lighten-2"
                         onClick={this.handlePageChange} 
                         data-target="/rules" 
                       >Regras</a>
-                    </NavItem>
-                    <NavItem>
+                    </li>
+                    <li>
                       <a
                         className="teal-text text-lighten-2"
                         onClick={this.handlePageChange} 
                         data-target="/howto" 
                       >Como Participar?</a>
-                    </NavItem>
-                    <NavItem>
+                    </li>
+                    <li>
                     <a className="teal-text text-lighten-2" href="http://www.beautyterapia.com.br">Blog</a>
-                    </NavItem>
+                    </li>
                   </Dropdown>
                 </ul>
               </div>
