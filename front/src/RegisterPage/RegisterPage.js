@@ -28,6 +28,12 @@ class RegisterPage extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
+  handlePageChange(e) {
+    e.preventDefault();
+    
+    history.push(e.currentTarget.dataset.target)
+  }
+
   componentDidMount() {
     window.$('#modal_login').modal('close');
     if (this.props.isLoggedIn) {
@@ -164,6 +170,16 @@ class RegisterPage extends Component {
     return (
       <div className="container">
         <h4>Participe!</h4>
+        {this.state.ref ? (
+          <p className="grey lighten-4 z-depth-2" style={{
+            padding: '10px'
+          }}>
+            Você acaba de receber um convite para participar da promoção de aniversário do Beauty Terapia!<br /> 
+            Para participar e concorrer ao nosso kit, basta se inscrever abaixo.<br />
+            Para maiores informações <a onClick={this.handlePageChange} data-target="/howto" style={{cursor:'pointer'}}>clique aqui</a>.<br />
+            Para ver as regras do sorteio <a onClick={this.handlePageChange} data-target="/rules" style={{cursor:'pointer'}}>clique aqui</a>
+          </p>
+        ) : ''}
         <form onSubmit={this.handleFormSubmit}>
           <Row>
             <Col s={12}>
